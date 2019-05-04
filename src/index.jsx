@@ -3,6 +3,9 @@ import ReactDOM from 'react-dom';
 
 import '../assets/stylesheets/application.scss';
 
+import FlatList from './components/flat_list';
+import Map from './components/map_container';
+
 const Hello = ({ name }) => {
   return (
     <div>
@@ -20,7 +23,8 @@ class App extends Component {
   render() {
     return (
       <div>
-        <h1>App</h1>
+        <FlatList />
+        <Map />
       </div>
     )
   }
