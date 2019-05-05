@@ -3,28 +3,29 @@ import ReactDOM from 'react-dom';
 
 import '../assets/stylesheets/application.scss';
 
+import Flats from '../data/flats';
+
 import FlatList from './components/flat_list';
 import Map from './components/map_container';
 
-const Hello = ({ name }) => {
-  return (
-    <div>
-      Hello,
-      {name}
-    </div>
-  );
-};
 
 class App extends Component {
   constructor(props) {
     super(props);
+    this.state = {
+      flats: Flats,
+      selectedFlat: {
+        lat: 48.885707,
+        lng: 2.343543
+      }
+    };
   }
 
   render() {
     return (
       <div>
-        <FlatList />
-        <Map />
+        <FlatList flats={this.state.flats} />
+        <Map selectedFlat={this.state.selectedFlat} />
       </div>
     )
   }

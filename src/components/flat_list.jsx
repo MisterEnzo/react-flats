@@ -6,18 +6,16 @@ class FlatList extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      flats: [
-        1,2,3,4,5,6
-      ]
+      flats: props.flats
     }
   }
 
   render() {
     return (
       <div className="flat-list">
-        {this.state.flats.map((flat => {
+        {this.state.flats.map(((flat, index) => {
           return (
-            <Flat />
+            <Flat flat={flat} key={index} />
           )
         }))}
       </div>
