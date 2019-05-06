@@ -3,7 +3,7 @@ import React from 'react';
 const MapMarker = () => {
   return(
     <div>
-      <i className="fas fa-map-marker-alt" styles={{ fontSize: '40' }}></i>
+      <p className="marker"></p>
     </div>
   )
 };
