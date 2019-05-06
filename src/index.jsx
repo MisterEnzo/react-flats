@@ -8,7 +8,6 @@ import Flats from '../data/flats';
 import FlatList from './components/flat_list';
 import Map from './components/map_container';
 
-
 class App extends Component {
   constructor(props) {
     super(props);
