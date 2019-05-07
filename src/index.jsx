@@ -20,10 +20,18 @@ class App extends Component {
     };
   }
 
+  selectFlat = (flat) => {
+    this.setState({selectedFlat : {
+      lat: flat.lat,
+      lng: flat.lng
+    }});
+    // console.log(`lat:${flat.lat} lng:${flat.lng}`);
+  }
+
   render() {
     return (
       <div>
-        <FlatList flats={this.state.flats} />
+        <FlatList flats={this.state.flats} selectFlat={this.selectFlat} />
         <Map selectedFlat={this.state.selectedFlat} />
       </div>
     )

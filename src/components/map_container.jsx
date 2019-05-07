@@ -17,8 +17,8 @@ class Map extends Component {
           <GoogleMapReact
            bootstrapURLKeys={{ key: API_KEY  }}
            defaultCenter={{
-             lat: this.props.selectedFlat.lat,
-             lng: this.props.selectedFlat.lng
+             lat: 48.885,
+             lng: 2.34
            }}
            defaultZoom={11}
           >

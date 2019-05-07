@@ -15,7 +15,7 @@ class FlatList extends Component {
       <div className="flat-list">
         {this.state.flats.map(((flat, index) => {
           return (
-            <Flat flat={flat} key={index} />
+            <Flat flat={flat} key={index} selectFlat={this.props.selectFlat} />
           )
         }))}
       </div>
