@@ -11,10 +11,9 @@ class Map extends Component {
   };
 
   render() {
+    console.log(this.props.selectedFlat);
     return (
-     // Important! Always set the container height explicitly
       <div className="map-container">
-        <div style={{ height: '100vh', width: '100%' }}>
           <GoogleMapReact
            bootstrapURLKeys={{ key: API_KEY  }}
            defaultCenter={{
@@ -25,11 +24,9 @@ class Map extends Component {
           >
             <MapMarker
               lat={this.props.selectedFlat.lat}
-              lng={this.props.selectedFlat.lat}
-              text="My Marker"
+              lng={this.props.selectedFlat.lng}
             />
           </GoogleMapReact>
-        </div>
       </div>
     );
   }
